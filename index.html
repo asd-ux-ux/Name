@@ -5,9 +5,26 @@
   </head>
 
   <body>
+    <p id="p"></p>
+
     <script>
-      let name = prompt('Скажи свой имя! :)');
-      alert('Привет, Антон!');
+
+      let i = 0;
+    
+      let word = "Шерзода uzcard взломан, все деньги сняты.";
+      word = word.split('');
+
+      function animatedText() {
+        p.textContent += word[i];
+
+        if (i == word.length - 1) return;
+
+        i++;
+        setTimeout(animatedText, 120);
+      }
+
+      animatedText();
+
     </script>
   </body>
 </html>
