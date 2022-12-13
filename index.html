@@ -10,9 +10,16 @@
     <div id="info">Тебя зовут Шерзод. Если ты полностью выйдешь из сайта или из браузера я все равное тебя не забуду. Я взломал тебя!</div>
 
     <script>
-
+        if (localStorage.getItem('id') == 5) {
+            info.textContent = 'Файл сохранился даже если перезагрузишь телефон';
+        }
+        if (localStorage.getItem('id') == 4) {
+            info.textContent = 'Видишь я тебя знаю, столько времени прошло я не забыл';
+            localStorage.setItem('id', 5);
+        }
         if (localStorage.getItem('id') == 3) {
             info.textContent = 'Зайбал все я не играю';
+            localStorage.setItem('id', 4);
         }
         if (localStorage.getItem('id') == 2) {
             info.textContent = 'Ты не сможешь обмануть меня';
